@@ -1,0 +1,519 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    padding: 18px;
+
+    background: rgba(5,5,5,.95);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ff91bd;
+}
+
+
+/* ================= GENERAL ================= */
+
+section {
+    min-height: 100vh;
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+.small-title,
+.signature,
+.big-love {
+    font-family: "Caveat", cursive;
+}
+
+h2 {
+    color: #ff91bd;
+    font-size: clamp(50px, 7vw, 80px);
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            #321824,
+            #080808 50%
+        );
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.small-title {
+    font-size: 28px;
+    color: #ff91bd;
+}
+
+h1 {
+    font-size: clamp(65px, 9vw, 120px);
+    line-height: .85;
+    margin: 20px 0;
+    color: #ff91bd;
+}
+
+h1 span {
+    color: white;
+}
+
+.hero-text h3 {
+    font-family: Poppins, sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 16px 30px;
+
+    background: #ff91bd;
+    color: #171017;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px #ff91bd55;
+}
+
+
+/* ================= PHOTOS ================= */
+
+.photos {
+    display: grid;
+
+    grid-template-columns:
+        1fr 0.8fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.polaroid {
+    background: #f6eee9;
+
+    padding: 12px 12px 35px;
+
+    box-shadow:
+        0 15px 40px #000;
+
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(2) {
+    transform: rotate(5deg);
+    margin-top: 60px;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.polaroid p {
+    color: #151015;
+
+    font-family: "Caveat", cursive;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    margin-top: 8px;
+}
+
+
+/* ================= PINK SECTION ================= */
+
+.pink-section {
+    background:
+        linear-gradient(
+            135deg,
+            #ffd3e4,
+            #f4a4c6
+        );
+
+    color: #1b1116;
+}
+
+.pink-section p {
+    color: #251820;
+}
+
+
+/* ================= GIFT ================= */
+
+.gift-button {
+    background: transparent;
+
+    border: none;
+
+    font-size: 130px;
+
+    cursor: pointer;
+
+    transition: .4s;
+}
+
+.gift-button:hover {
+    transform:
+        scale(1.15)
+        rotate(-5deg);
+}
+
+.gift-message {
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background: #111;
+
+    color: white;
+
+    box-shadow: 0 20px 50px #0005;
+}
+
+.gift-message h3 {
+    color: #ff91bd;
+
+    font-size: 45px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ================= STORY ================= */
+
+.story-card {
+    background: #111;
+
+    border: 1px solid #ff91bd55;
+
+    padding: 40px;
+
+    border-radius: 30px;
+}
+
+.story-card h3 {
+    color: #ff91bd;
+
+    font-size: 40px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.story-photos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    max-width: 850px;
+
+    margin: auto;
+}
+
+.story-photos .polaroid img {
+    height: 350px;
+}
+
+.story-text {
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+
+/* ================= LETTER ================= */
+
+.letter {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: #f6eee9;
+
+    color: #21171b;
+
+    padding: 50px;
+
+    box-shadow: 0 20px 50px #0007;
+
+    transform: rotate(-1deg);
+}
+
+.letter h2 {
+    color: #21171b;
+}
+
+.letter p {
+    color: #30242a;
+}
+
+.signature {
+    font-size: 35px;
+
+    color: #ff5d9b !important;
+}
+
+
+/* ================= REASONS ================= */
+
+.reasons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.reason {
+    background: #111;
+
+    border:
+        1px solid
+        #ff91bd55;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    line-height: 1.7;
+}
+
+.reason span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-right: 10px;
+
+    background: #ff91bd;
+
+    color: #151015;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+
+/* ================= MUSIC ================= */
+
+.music-section {
+    background:
+        radial-gradient(
+            circle at center,
+            #29141f,
+            #080808
+        );
+}
+
+audio {
+    width: min(600px, 100%);
+}
+
+
+/* ================= SECRET ================= */
+
+.secret {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background: #111;
+
+    border:
+        1px dashed
+        #ff91bd;
+
+    border-radius: 30px;
+}
+
+.secret h3 {
+    font-size: 45px;
+
+    color: #ff91bd;
+
+    margin: 25px 0;
+}
+
+.big-love {
+    font-size: 45px;
+
+    color: #ff91bd;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #080808;
+}
+
+footer h2 {
+    font-size: 55px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 800px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .photos {
+        grid-template-columns: 1fr 0.8fr;
+    }
+
+    .polaroid img {
+        height: 300px;
+    }
+
+    .story-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 30px 25px;
+    }
+
+    .secret {
+        padding: 30px 20px;
+    }
+
+    .secret h3 {
+        font-size: 35px;
+    }
+
+}
